@@ -1,0 +1,81 @@
+/*hero-section*/
+.hero-container {
+    background-image: url(background-hero.jpg);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*egenskaper för header*/
+.header {
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.10);
+    width: 100%;
+}
+/*egenskaper för nav*/
+.header nav {
+    display: flex;
+    padding: 5px;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+/*länk styling*/
+.header nav a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*kort styling*/
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 200px;
+    width: 200px;
+    border: solid black 3px;
+    border-radius: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* vi lägger aktiv här så att i JS så kan vi toggla fram o tillbaka
+mellan standard koden och sen koden nedan för blå bakgrund*/
+.card.active {
+    background-color: rgb(0, 0, 215, 0.2);
+    color: white;
+}
+
+
+/*footer delen*/
+.footer {
+    background-color: black;
+}
+
+.footer p {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 850px) {
+    .hero-container {
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
